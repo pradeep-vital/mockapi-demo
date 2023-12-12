@@ -1,3 +1,5 @@
+key: YOUR_SECRET_KEY # prevents unauthorized access
+
 models:
   Post:
     hasMany: [Comment]
