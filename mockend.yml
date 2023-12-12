@@ -3,7 +3,7 @@ models:
     data: [{
           "name": "Kitchen Knife Set",
           "description": "A set of high-quality knives for various kitchen tasks, including chopping, slicing, and dicing.",
-          "price": "100"
+          "price": "150"
         },
         {
           "name": "Cookware Set",
