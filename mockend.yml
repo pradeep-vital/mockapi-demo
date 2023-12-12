@@ -1,4 +1,4 @@
-key: YOUR_SECRET_KEY # prevents unauthorized access
+key: 'Gn#5476Bx'
 
 models:
   Post:
