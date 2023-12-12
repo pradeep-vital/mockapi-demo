@@ -1,77 +1,19 @@
 models:
   Post:
-    data: [{
-          "name": "Kitchen Knife Set",
-          "description": "A set of high-quality knives for various kitchen tasks, including chopping, slicing, and dicing.",
-          "price": "150"
-        },
-        {
-          "name": "Cookware Set",
-          "description": "A set of pots and pans made from materials such as stainless steel, non-stick, or cast iron.",
-          "price": "250"
-        },
-        {
-          "name": "Blender",
-          "description": "A versatile appliance for blending smoothies, soups, and sauces.",
-          "price": "325"
-        },
-        {
-          "name": "Coffee Maker",
-          "description": "A machine for brewing coffee, available in various types such as drip, espresso, and French press.",
-          "price": "50"
-        },
-        {
-          "name": "Toaster Oven",
-          "description": "A compact oven used for toasting, baking, and broiling.",
-          "price": "230"
-        },
-        {
-          "name": "Food Processor",
-          "description": "An electric appliance that helps with chopping, slicing, grating, and more.",
-          "price": "500"
-        },
-        {
-          "name": "Stand Mixer",
-          "description": "A powerful mixer for baking and cooking, often used for making bread or desserts.",
-          "price": "600"
-        },
-        {
-          "name": "Kitchen Scale",
-          "description": "A tool for measuring ingredients accurately for cooking and baking.",
-          "price": "650"
-        },
-        {
-          "name": "Cutting Boards",
-          "description": "Durable surfaces for chopping and preparing food, available in materials like wood, plastic, and bamboo.",
-          "price": "450"
-        },
-        {
-          "name": "Cooking Utensil Set",
-          "description": "A set of essential kitchen tools like spatulas, ladles, and spoons.",
-          "price": "475"
-        },
-        {
-          "name": "Non-stick Cookware",
-          "description": "Pans and pots with a non-stick coating for easy cooking and cleaning.",
-          "price": "900"
-        },
-        {
-          "name": "Instant Pot",
-          "description": "A multi-functional electric pressure cooker that can also be used for slow cooking, sautéing, and more.",
-          "price": "1200"
-        },
-        {
-          "name": "Wine Glasses",
-          "description": "Glassware designed for serving wine, available in various styles such as red wine, white wine, and stemless glasses.",
-          "price": "150"
-        },
-        {
-          "name": "Vegetable Spiralizer",
-          "description": "A tool for turning vegetables into spiral-shaped noodles, often used for creating healthy alternatives to pasta.",
-          "price": "300"
-        },
-        {
-          "name": "Can Opener",
-          "description": "A device for opening canned goods effortlessly.",
-          "price": "1500"
-        }]
+    hasMany: [Comment]
+    fake:
+      _count: 10
+      cover: { imageURL: [1920, 1080] }
+      title: { loremWords: [5, 20] }
+      body: { loremParagraphs: [10, 100] }
+      category: { oneOfString: [one, two, three] }
+      isDraft: { bool: 20 }
+      views: { int: [0, 1000] }
+      createdAt: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
+  Comment:
+    belongsTo: [Post]
+    fake:
+      _count: 25
+      email: email
+      body: { loremParagraphs: [10, 100] }
+      createdAt: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
