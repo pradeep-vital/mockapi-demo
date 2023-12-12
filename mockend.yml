@@ -1,6 +1,5 @@
-key: 'Gn#5476Bx'
 models:
-  Product:
+  Post:
     fake:
       _count: 15
       name: { kitchenProducts: [5, 20] }
