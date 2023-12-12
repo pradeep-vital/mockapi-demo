@@ -1,7 +1,5 @@
 models:
-  Post:
-    models:
-  Post:
+  Product:
     data: [
       {
       "name": "Kitchen Knife Set",
